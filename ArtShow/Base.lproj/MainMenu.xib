@@ -676,7 +676,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
             </view>
-            <point key="canvasLocation" x="329" y="360"/>
+            <point key="canvasLocation" x="251" y="363"/>
         </window>
     </objects>
 </document>

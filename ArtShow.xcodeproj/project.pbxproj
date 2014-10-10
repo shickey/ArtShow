@@ -17,6 +17,7 @@
 		A34552F819E78A05000DE5FA /* CameraHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = A34552F719E78A05000DE5FA /* CameraHandler.mm */; };
 		A34552FD19E79962000DE5FA /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34552FC19E79962000DE5FA /* QTKit.framework */; };
 		A34552FF19E79978000DE5FA /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34552FE19E79978000DE5FA /* OpenCL.framework */; };
+		A345530319E8362A000DE5FA /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = A345530219E8362A000DE5FA /* CoreDataStack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,9 @@
 		A34552FC19E79962000DE5FA /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
 		A34552FE19E79978000DE5FA /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = System/Library/Frameworks/OpenCL.framework; sourceTree = SDKROOT; };
 		A345530019E83598000DE5FA /* CameraHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraHandler.h; sourceTree = "<group>"; };
+		A345530119E8362A000DE5FA /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		A345530219E8362A000DE5FA /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		A345530619E83788000DE5FA /* ArtShow-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ArtShow-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +99,14 @@
 			children = (
 				A34552D119E7802B000DE5FA /* AppDelegate.h */,
 				A34552D219E7802B000DE5FA /* AppDelegate.m */,
+				A345530119E8362A000DE5FA /* CoreDataStack.h */,
+				A345530219E8362A000DE5FA /* CoreDataStack.m */,
 				A345530019E83598000DE5FA /* CameraHandler.h */,
 				A34552F719E78A05000DE5FA /* CameraHandler.mm */,
 				A34552D719E7802B000DE5FA /* Images.xcassets */,
 				A34552D919E7802B000DE5FA /* MainMenu.xib */,
 				A34552D419E7802B000DE5FA /* ArtShow.xcdatamodeld */,
+				A345530619E83788000DE5FA /* ArtShow-Prefix.pch */,
 				A34552CD19E7802B000DE5FA /* Supporting Files */,
 			);
 			path = ArtShow;
@@ -230,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A345530319E8362A000DE5FA /* CoreDataStack.m in Sources */,
 				A34552D619E7802B000DE5FA /* ArtShow.xcdatamodeld in Sources */,
 				A34552F819E78A05000DE5FA /* CameraHandler.mm in Sources */,
 				A34552D319E7802B000DE5FA /* AppDelegate.m in Sources */,
@@ -352,8 +360,8 @@
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ArtShow/ArtShow-Prefix.pch";
 				INFOPLIST_FILE = ArtShow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -369,8 +377,8 @@
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ArtShow/ArtShow-Prefix.pch";
 				INFOPLIST_FILE = ArtShow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
