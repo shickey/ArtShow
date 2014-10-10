@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A34552D019E7802B000DE5FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A34552CF19E7802B000DE5FA /* main.m */; };
+		A34552D319E7802B000DE5FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A34552D219E7802B000DE5FA /* AppDelegate.m */; };
+		A34552D619E7802B000DE5FA /* ArtShow.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A34552D419E7802B000DE5FA /* ArtShow.xcdatamodeld */; };
+		A34552D819E7802B000DE5FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A34552D719E7802B000DE5FA /* Images.xcassets */; };
+		A34552DB19E7802B000DE5FA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A34552D919E7802B000DE5FA /* MainMenu.xib */; };
+		A34552E719E7802B000DE5FA /* ArtShowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A34552E619E7802B000DE5FA /* ArtShowTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A34552E119E7802B000DE5FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A34552C219E7802B000DE5FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A34552C919E7802B000DE5FA;
+			remoteInfo = ArtShow;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A34552CA19E7802B000DE5FA /* ArtShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A34552CE19E7802B000DE5FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A34552CF19E7802B000DE5FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A34552D119E7802B000DE5FA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A34552D219E7802B000DE5FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A34552D519E7802B000DE5FA /* ArtShow.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArtShow.xcdatamodel; sourceTree = "<group>"; };
+		A34552D719E7802B000DE5FA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A34552DA19E7802B000DE5FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		A34552E019E7802B000DE5FA /* ArtShowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtShowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A34552E519E7802B000DE5FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A34552E619E7802B000DE5FA /* ArtShowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtShowTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A34552C719E7802B000DE5FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A34552DD19E7802B000DE5FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A34552C119E7802B000DE5FA = {
+			isa = PBXGroup;
+			children = (
+				A34552CC19E7802B000DE5FA /* ArtShow */,
+				A34552E319E7802B000DE5FA /* ArtShowTests */,
+				A34552CB19E7802B000DE5FA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A34552CB19E7802B000DE5FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A34552CA19E7802B000DE5FA /* ArtShow.app */,
+				A34552E019E7802B000DE5FA /* ArtShowTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A34552CC19E7802B000DE5FA /* ArtShow */ = {
+			isa = PBXGroup;
+			children = (
+				A34552D119E7802B000DE5FA /* AppDelegate.h */,
+				A34552D219E7802B000DE5FA /* AppDelegate.m */,
+				A34552D719E7802B000DE5FA /* Images.xcassets */,
+				A34552D919E7802B000DE5FA /* MainMenu.xib */,
+				A34552D419E7802B000DE5FA /* ArtShow.xcdatamodeld */,
+				A34552CD19E7802B000DE5FA /* Supporting Files */,
+			);
+			path = ArtShow;
+			sourceTree = "<group>";
+		};
+		A34552CD19E7802B000DE5FA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A34552CE19E7802B000DE5FA /* Info.plist */,
+				A34552CF19E7802B000DE5FA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A34552E319E7802B000DE5FA /* ArtShowTests */ = {
+			isa = PBXGroup;
+			children = (
+				A34552E619E7802B000DE5FA /* ArtShowTests.m */,
+				A34552E419E7802B000DE5FA /* Supporting Files */,
+			);
+			path = ArtShowTests;
+			sourceTree = "<group>";
+		};
+		A34552E419E7802B000DE5FA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A34552E519E7802B000DE5FA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A34552C919E7802B000DE5FA /* ArtShow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A34552EA19E7802B000DE5FA /* Build configuration list for PBXNativeTarget "ArtShow" */;
+			buildPhases = (
+				A34552C619E7802B000DE5FA /* Sources */,
+				A34552C719E7802B000DE5FA /* Frameworks */,
+				A34552C819E7802B000DE5FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ArtShow;
+			productName = ArtShow;
+			productReference = A34552CA19E7802B000DE5FA /* ArtShow.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A34552DF19E7802B000DE5FA /* ArtShowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A34552ED19E7802B000DE5FA /* Build configuration list for PBXNativeTarget "ArtShowTests" */;
+			buildPhases = (
+				A34552DC19E7802B000DE5FA /* Sources */,
+				A34552DD19E7802B000DE5FA /* Frameworks */,
+				A34552DE19E7802B000DE5FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A34552E219E7802B000DE5FA /* PBXTargetDependency */,
+			);
+			name = ArtShowTests;
+			productName = ArtShowTests;
+			productReference = A34552E019E7802B000DE5FA /* ArtShowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A34552C219E7802B000DE5FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Open Set Software";
+				TargetAttributes = {
+					A34552C919E7802B000DE5FA = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					A34552DF19E7802B000DE5FA = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = A34552C919E7802B000DE5FA;
+					};
+				};
+			};
+			buildConfigurationList = A34552C519E7802B000DE5FA /* Build configuration list for PBXProject "ArtShow" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A34552C119E7802B000DE5FA;
+			productRefGroup = A34552CB19E7802B000DE5FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A34552C919E7802B000DE5FA /* ArtShow */,
+				A34552DF19E7802B000DE5FA /* ArtShowTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A34552C819E7802B000DE5FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A34552D819E7802B000DE5FA /* Images.xcassets in Resources */,
+				A34552DB19E7802B000DE5FA /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A34552DE19E7802B000DE5FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A34552C619E7802B000DE5FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A34552D619E7802B000DE5FA /* ArtShow.xcdatamodeld in Sources */,
+				A34552D319E7802B000DE5FA /* AppDelegate.m in Sources */,
+				A34552D019E7802B000DE5FA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A34552DC19E7802B000DE5FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A34552E719E7802B000DE5FA /* ArtShowTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A34552E219E7802B000DE5FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A34552C919E7802B000DE5FA /* ArtShow */;
+			targetProxy = A34552E119E7802B000DE5FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A34552D919E7802B000DE5FA /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A34552DA19E7802B000DE5FA /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A34552E819E7802B000DE5FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A34552E919E7802B000DE5FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A34552EB19E7802B000DE5FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ArtShow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A34552EC19E7802B000DE5FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ArtShow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A34552EE19E7802B000DE5FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ArtShowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArtShow.app/Contents/MacOS/ArtShow";
+			};
+			name = Debug;
+		};
+		A34552EF19E7802B000DE5FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ArtShowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArtShow.app/Contents/MacOS/ArtShow";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A34552C519E7802B000DE5FA /* Build configuration list for PBXProject "ArtShow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A34552E819E7802B000DE5FA /* Debug */,
+				A34552E919E7802B000DE5FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A34552EA19E7802B000DE5FA /* Build configuration list for PBXNativeTarget "ArtShow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A34552EB19E7802B000DE5FA /* Debug */,
+				A34552EC19E7802B000DE5FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A34552ED19E7802B000DE5FA /* Build configuration list for PBXNativeTarget "ArtShowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A34552EE19E7802B000DE5FA /* Debug */,
+				A34552EF19E7802B000DE5FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A34552D419E7802B000DE5FA /* ArtShow.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A34552D519E7802B000DE5FA /* ArtShow.xcdatamodel */,
+			);
+			currentVersion = A34552D519E7802B000DE5FA /* ArtShow.xcdatamodel */;
+			path = ArtShow.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A34552C219E7802B000DE5FA /* Project object */;
+}
