@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="untitled.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6244" systemVersion="13E28" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="BASQuestion" syncable="YES">
+        <attribute name="questionText" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="responses" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="BASResponse" inverseName="question" inverseEntity="BASResponse" syncable="YES"/>
+    </entity>
+    <entity name="BASResponse" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="responseText" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="question" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BASQuestion" inverseName="responses" inverseEntity="BASQuestion" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BASQuestion" positionX="-254" positionY="-54" width="128" height="73"/>
+        <element name="BASResponse" positionX="-54" positionY="0" width="128" height="88"/>
+    </elements>
 </model>

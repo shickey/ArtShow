@@ -18,6 +18,13 @@
 		A34552FD19E79962000DE5FA /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34552FC19E79962000DE5FA /* QTKit.framework */; };
 		A34552FF19E79978000DE5FA /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34552FE19E79978000DE5FA /* OpenCL.framework */; };
 		A345530319E8362A000DE5FA /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = A345530219E8362A000DE5FA /* CoreDataStack.m */; };
+		A345530B19EABB2E000DE5FA /* UserWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A345530A19EABB2E000DE5FA /* UserWindowController.m */; };
+		A345530D19EABDB2000DE5FA /* UserWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A345530C19EABDB2000DE5FA /* UserWindowController.xib */; };
+		A345531319EAD10B000DE5FA /* BASInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A345531119EAD10B000DE5FA /* BASInputViewController.m */; };
+		A345531419EAD10B000DE5FA /* BASInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A345531219EAD10B000DE5FA /* BASInputViewController.xib */; };
+		A345531819EAD15E000DE5FA /* BASDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A345531619EAD15E000DE5FA /* BASDisplayViewController.m */; };
+		A345531919EAD15E000DE5FA /* BASDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A345531719EAD15E000DE5FA /* BASDisplayViewController.xib */; };
+		A345531C19EAD5AD000DE5FA /* BASViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A345531B19EAD5AD000DE5FA /* BASViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +49,7 @@
 		A34552E019E7802B000DE5FA /* ArtShowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtShowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A34552E519E7802B000DE5FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A34552E619E7802B000DE5FA /* ArtShowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtShowTests.m; sourceTree = "<group>"; };
-		A34552F019E78601000DE5FA /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../../../../../Library/Frameworks/opencv2.framework; sourceTree = "<group>"; };
+		A34552F019E78601000DE5FA /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = /Library/Frameworks/opencv2.framework; sourceTree = "<absolute>"; };
 		A34552F719E78A05000DE5FA /* CameraHandler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CameraHandler.mm; sourceTree = "<group>"; };
 		A34552FC19E79962000DE5FA /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
 		A34552FE19E79978000DE5FA /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = System/Library/Frameworks/OpenCL.framework; sourceTree = SDKROOT; };
@@ -50,6 +57,17 @@
 		A345530119E8362A000DE5FA /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
 		A345530219E8362A000DE5FA /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
 		A345530619E83788000DE5FA /* ArtShow-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ArtShow-Prefix.pch"; sourceTree = "<group>"; };
+		A345530919EABB2E000DE5FA /* UserWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserWindowController.h; sourceTree = "<group>"; };
+		A345530A19EABB2E000DE5FA /* UserWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserWindowController.m; sourceTree = "<group>"; };
+		A345530C19EABDB2000DE5FA /* UserWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserWindowController.xib; sourceTree = "<group>"; };
+		A345531019EAD10B000DE5FA /* BASInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BASInputViewController.h; sourceTree = "<group>"; };
+		A345531119EAD10B000DE5FA /* BASInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BASInputViewController.m; sourceTree = "<group>"; };
+		A345531219EAD10B000DE5FA /* BASInputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BASInputViewController.xib; sourceTree = "<group>"; };
+		A345531519EAD15E000DE5FA /* BASDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BASDisplayViewController.h; sourceTree = "<group>"; };
+		A345531619EAD15E000DE5FA /* BASDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BASDisplayViewController.m; sourceTree = "<group>"; };
+		A345531719EAD15E000DE5FA /* BASDisplayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BASDisplayViewController.xib; sourceTree = "<group>"; };
+		A345531A19EAD5AD000DE5FA /* BASViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BASViewController.h; sourceTree = "<group>"; };
+		A345531B19EAD5AD000DE5FA /* BASViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BASViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +94,6 @@
 		A34552C119E7802B000DE5FA = {
 			isa = PBXGroup;
 			children = (
-				A34552FE19E79978000DE5FA /* OpenCL.framework */,
-				A34552FC19E79962000DE5FA /* QTKit.framework */,
-				A34552F019E78601000DE5FA /* opencv2.framework */,
 				A34552CC19E7802B000DE5FA /* ArtShow */,
 				A34552E319E7802B000DE5FA /* ArtShowTests */,
 				A34552CB19E7802B000DE5FA /* Products */,
@@ -99,15 +114,25 @@
 			children = (
 				A34552D119E7802B000DE5FA /* AppDelegate.h */,
 				A34552D219E7802B000DE5FA /* AppDelegate.m */,
+				A345530919EABB2E000DE5FA /* UserWindowController.h */,
+				A345530A19EABB2E000DE5FA /* UserWindowController.m */,
+				A345530C19EABDB2000DE5FA /* UserWindowController.xib */,
+				A345531A19EAD5AD000DE5FA /* BASViewController.h */,
+				A345531B19EAD5AD000DE5FA /* BASViewController.m */,
+				A345531019EAD10B000DE5FA /* BASInputViewController.h */,
+				A345531119EAD10B000DE5FA /* BASInputViewController.m */,
+				A345531219EAD10B000DE5FA /* BASInputViewController.xib */,
+				A345531519EAD15E000DE5FA /* BASDisplayViewController.h */,
+				A345531619EAD15E000DE5FA /* BASDisplayViewController.m */,
+				A345531719EAD15E000DE5FA /* BASDisplayViewController.xib */,
 				A345530119E8362A000DE5FA /* CoreDataStack.h */,
 				A345530219E8362A000DE5FA /* CoreDataStack.m */,
 				A345530019E83598000DE5FA /* CameraHandler.h */,
 				A34552F719E78A05000DE5FA /* CameraHandler.mm */,
-				A34552D719E7802B000DE5FA /* Images.xcassets */,
 				A34552D919E7802B000DE5FA /* MainMenu.xib */,
 				A34552D419E7802B000DE5FA /* ArtShow.xcdatamodeld */,
-				A345530619E83788000DE5FA /* ArtShow-Prefix.pch */,
 				A34552CD19E7802B000DE5FA /* Supporting Files */,
+				A345530819E8498A000DE5FA /* Frameworks */,
 			);
 			path = ArtShow;
 			sourceTree = "<group>";
@@ -115,6 +140,8 @@
 		A34552CD19E7802B000DE5FA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A34552D719E7802B000DE5FA /* Images.xcassets */,
+				A345530619E83788000DE5FA /* ArtShow-Prefix.pch */,
 				A34552CE19E7802B000DE5FA /* Info.plist */,
 				A34552CF19E7802B000DE5FA /* main.m */,
 			);
@@ -136,6 +163,17 @@
 				A34552E519E7802B000DE5FA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A345530819E8498A000DE5FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A34552FE19E79978000DE5FA /* OpenCL.framework */,
+				A34552FC19E79962000DE5FA /* QTKit.framework */,
+				A34552F019E78601000DE5FA /* opencv2.framework */,
+			);
+			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,8 +256,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A345531419EAD10B000DE5FA /* BASInputViewController.xib in Resources */,
 				A34552D819E7802B000DE5FA /* Images.xcassets in Resources */,
 				A34552DB19E7802B000DE5FA /* MainMenu.xib in Resources */,
+				A345531919EAD15E000DE5FA /* BASDisplayViewController.xib in Resources */,
+				A345530D19EABDB2000DE5FA /* UserWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,10 +278,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A345531819EAD15E000DE5FA /* BASDisplayViewController.m in Sources */,
 				A345530319E8362A000DE5FA /* CoreDataStack.m in Sources */,
 				A34552D619E7802B000DE5FA /* ArtShow.xcdatamodeld in Sources */,
+				A345530B19EABB2E000DE5FA /* UserWindowController.m in Sources */,
+				A345531319EAD10B000DE5FA /* BASInputViewController.m in Sources */,
 				A34552F819E78A05000DE5FA /* CameraHandler.mm in Sources */,
 				A34552D319E7802B000DE5FA /* AppDelegate.m in Sources */,
+				A345531C19EAD5AD000DE5FA /* BASViewController.m in Sources */,
 				A34552D019E7802B000DE5FA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

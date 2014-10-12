@@ -8,10 +8,11 @@
 
 #import "AppDelegate.h"
 #import "CoreDataStack.h"
+#import "UserWindowController.h"
 
 @interface AppDelegate ()
 
-@property (weak) IBOutlet NSWindow *window;
+@property (strong, nonatomic) UserWindowController *windowController;
 @property (strong, nonatomic) CoreDataStack *coreDataStack;
 
 @end
@@ -21,6 +22,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     self.coreDataStack = [[CoreDataStack alloc] init];
+    self.windowController = [[UserWindowController alloc] initWithWindowNibName:@"UserWindowController"];
+    [self.windowController showWindow:self];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
