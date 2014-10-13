@@ -9,18 +9,22 @@
 #import "UserWindowController.h"
 #import "BASInputViewController.h"
 #import "BASDisplayViewController.h"
+#import "VideoStream.h"
 
 typedef enum : NSUInteger {
     BASInputViewControllerValue = 0,
     BASDisplayViewControllerValue
 } BASViewControllerValue;
 
-@interface UserWindowController ()
+@interface UserWindowController () <VideoStreamDelegate>
 
 @property (strong, nonatomic) NSArray *viewControllers;
 @property (strong, nonatomic) BASViewController *currentViewController;
 
 @property (weak, nonatomic) IBOutlet NSView *containerView;
+
+@property (strong, nonatomic) VideoStream *stream;
+@property (weak) IBOutlet NSImageView *videoView;
 
 - (void)switchViewController:(BASViewControllerValue)viewControllerValue;
 
@@ -33,6 +37,8 @@ typedef enum : NSUInteger {
     self = [super initWithWindowNibName:@"UserWindowController"];
     if (self) {
         _managedObjectContext = managedObjectContext;
+        _stream = [[VideoStream alloc] init];
+        [_stream setDelegate:self];
     }
     return self;
 }
@@ -50,6 +56,8 @@ typedef enum : NSUInteger {
     }
     
     [self switchViewController:BASInputViewControllerValue];
+    
+    [_stream start];
 }
 
 - (void)switchViewController:(BASViewControllerValue)viewControllerValue
@@ -71,6 +79,29 @@ typedef enum : NSUInteger {
     
     [nextViewController viewDidAppear];
     self.currentViewController = nextViewController;
+}
+
+- (void)videoStream:(VideoStream *)videoStream frameReady:(VideoFrame)frame
+{
+    __weak typeof(self) _weakSelf = self;
+    dispatch_sync( dispatch_get_main_queue(), ^{
+        CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+        CGContextRef newContext = CGBitmapContextCreate(frame.data,
+                                                        frame.width,
+                                                        frame.height,
+                                                        8,
+                                                        frame.stride,
+                                                        colorSpace,
+                                                        kCGBitmapByteOrder32Little |
+                                                        kCGImageAlphaPremultipliedFirst);
+        CGImageRef newImage = CGBitmapContextCreateImage(newContext);
+        CGContextRelease(newContext);
+        CGColorSpaceRelease(colorSpace);
+        
+        NSImage *image = [[NSImage alloc] initWithCGImage:newImage size:NSZeroSize];
+        CGImageRelease(newImage);
+        [[_weakSelf videoView] setImage:image];
+    });
 }
 
 @end

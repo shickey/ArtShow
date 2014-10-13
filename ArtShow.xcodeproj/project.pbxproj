@@ -13,7 +13,6 @@
 		A34552D819E7802B000DE5FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A34552D719E7802B000DE5FA /* Images.xcassets */; };
 		A34552E719E7802B000DE5FA /* ArtShowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A34552E619E7802B000DE5FA /* ArtShowTests.m */; };
 		A34552F119E78601000DE5FA /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34552F019E78601000DE5FA /* opencv2.framework */; };
-		A34552F819E78A05000DE5FA /* CameraHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = A34552F719E78A05000DE5FA /* CameraHandler.mm */; };
 		A34552FD19E79962000DE5FA /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34552FC19E79962000DE5FA /* QTKit.framework */; };
 		A34552FF19E79978000DE5FA /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34552FE19E79978000DE5FA /* OpenCL.framework */; };
 		A345530319E8362A000DE5FA /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = A345530219E8362A000DE5FA /* CoreDataStack.m */; };
@@ -31,6 +30,8 @@
 		A39C3FBD19EB117300EE4EBF /* _BASResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = A39C3FBB19EB117300EE4EBF /* _BASResponse.m */; };
 		A39C3FC219EB239400EE4EBF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A39C3FC119EB239400EE4EBF /* QuartzCore.framework */; };
 		A39C3FC519EB2C2900EE4EBF /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = A39C3FC419EB2C2900EE4EBF /* lock.png */; };
+		A39C3FC719EB664400EE4EBF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A39C3FC619EB664400EE4EBF /* AVFoundation.framework */; };
+		A39C3FCA19EB66EB00EE4EBF /* VideoStream.m in Sources */ = {isa = PBXBuildFile; fileRef = A39C3FC919EB66EB00EE4EBF /* VideoStream.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,10 +56,8 @@
 		A34552E519E7802B000DE5FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A34552E619E7802B000DE5FA /* ArtShowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtShowTests.m; sourceTree = "<group>"; };
 		A34552F019E78601000DE5FA /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = /Library/Frameworks/opencv2.framework; sourceTree = "<absolute>"; };
-		A34552F719E78A05000DE5FA /* CameraHandler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CameraHandler.mm; sourceTree = "<group>"; };
 		A34552FC19E79962000DE5FA /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
 		A34552FE19E79978000DE5FA /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = System/Library/Frameworks/OpenCL.framework; sourceTree = SDKROOT; };
-		A345530019E83598000DE5FA /* CameraHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraHandler.h; sourceTree = "<group>"; };
 		A345530119E8362A000DE5FA /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
 		A345530219E8362A000DE5FA /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
 		A345530619E83788000DE5FA /* ArtShow-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ArtShow-Prefix.pch"; sourceTree = "<group>"; };
@@ -84,6 +83,10 @@
 		A39C3FBB19EB117300EE4EBF /* _BASResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _BASResponse.m; sourceTree = "<group>"; };
 		A39C3FC119EB239400EE4EBF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A39C3FC419EB2C2900EE4EBF /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lock.png; path = Resources/lock.png; sourceTree = "<group>"; };
+		A39C3FC619EB664400EE4EBF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A39C3FC819EB66EB00EE4EBF /* VideoStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoStream.h; sourceTree = "<group>"; };
+		A39C3FC919EB66EB00EE4EBF /* VideoStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoStream.m; sourceTree = "<group>"; };
+		A39C3FCB19EB6CA000EE4EBF /* VideoFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoFrame.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A39C3FC719EB664400EE4EBF /* AVFoundation.framework in Frameworks */,
 				A39C3FC219EB239400EE4EBF /* QuartzCore.framework in Frameworks */,
 				A34552FF19E79978000DE5FA /* OpenCL.framework in Frameworks */,
 				A34552FD19E79962000DE5FA /* QTKit.framework in Frameworks */,
@@ -111,6 +115,7 @@
 		A34552C119E7802B000DE5FA = {
 			isa = PBXGroup;
 			children = (
+				A39C3FC619EB664400EE4EBF /* AVFoundation.framework */,
 				A34552CC19E7802B000DE5FA /* ArtShow */,
 				A34552E319E7802B000DE5FA /* ArtShowTests */,
 				A34552CB19E7802B000DE5FA /* Products */,
@@ -219,8 +224,9 @@
 		A39C3FA719EADE8500EE4EBF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A345530019E83598000DE5FA /* CameraHandler.h */,
-				A34552F719E78A05000DE5FA /* CameraHandler.mm */,
+				A39C3FCB19EB6CA000EE4EBF /* VideoFrame.h */,
+				A39C3FC819EB66EB00EE4EBF /* VideoStream.h */,
+				A39C3FC919EB66EB00EE4EBF /* VideoStream.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -351,11 +357,11 @@
 				A345530319E8362A000DE5FA /* CoreDataStack.m in Sources */,
 				A39C3FB619EB116E00EE4EBF /* BASQuestion.m in Sources */,
 				A34552D619E7802B000DE5FA /* ArtShow.xcdatamodeld in Sources */,
+				A39C3FCA19EB66EB00EE4EBF /* VideoStream.m in Sources */,
 				A345530B19EABB2E000DE5FA /* UserWindowController.m in Sources */,
 				A39C3FBD19EB117300EE4EBF /* _BASResponse.m in Sources */,
 				A39C3FBC19EB117300EE4EBF /* _BASQuestion.m in Sources */,
 				A345531319EAD10B000DE5FA /* BASInputViewController.m in Sources */,
-				A34552F819E78A05000DE5FA /* CameraHandler.mm in Sources */,
 				A34552D319E7802B000DE5FA /* AppDelegate.m in Sources */,
 				A345531C19EAD5AD000DE5FA /* BASViewController.m in Sources */,
 				A34552D019E7802B000DE5FA /* main.m in Sources */,
