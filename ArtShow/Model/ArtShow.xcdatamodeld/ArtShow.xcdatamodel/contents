@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6244" systemVersion="13E28" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="BASQuestion" syncable="YES">
+    <entity name="BASQuestion" representedClassName="BASQuestion" syncable="YES">
         <attribute name="questionText" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="responses" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="BASResponse" inverseName="question" inverseEntity="BASResponse" syncable="YES"/>
     </entity>
-    <entity name="BASResponse" syncable="YES">
+    <entity name="BASResponse" representedClassName="BASResponse" syncable="YES">
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="responseText" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="question" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BASQuestion" inverseName="responses" inverseEntity="BASQuestion" syncable="YES"/>

@@ -11,7 +11,6 @@
 		A34552D319E7802B000DE5FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A34552D219E7802B000DE5FA /* AppDelegate.m */; };
 		A34552D619E7802B000DE5FA /* ArtShow.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A34552D419E7802B000DE5FA /* ArtShow.xcdatamodeld */; };
 		A34552D819E7802B000DE5FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A34552D719E7802B000DE5FA /* Images.xcassets */; };
-		A34552DB19E7802B000DE5FA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A34552D919E7802B000DE5FA /* MainMenu.xib */; };
 		A34552E719E7802B000DE5FA /* ArtShowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A34552E619E7802B000DE5FA /* ArtShowTests.m */; };
 		A34552F119E78601000DE5FA /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34552F019E78601000DE5FA /* opencv2.framework */; };
 		A34552F819E78A05000DE5FA /* CameraHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = A34552F719E78A05000DE5FA /* CameraHandler.mm */; };
@@ -25,6 +24,13 @@
 		A345531819EAD15E000DE5FA /* BASDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A345531619EAD15E000DE5FA /* BASDisplayViewController.m */; };
 		A345531919EAD15E000DE5FA /* BASDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A345531719EAD15E000DE5FA /* BASDisplayViewController.xib */; };
 		A345531C19EAD5AD000DE5FA /* BASViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A345531B19EAD5AD000DE5FA /* BASViewController.m */; };
+		A39C3FB119EB10AE00EE4EBF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A39C3FAF19EB10AE00EE4EBF /* MainMenu.xib */; };
+		A39C3FB619EB116E00EE4EBF /* BASQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = A39C3FB319EB116E00EE4EBF /* BASQuestion.m */; };
+		A39C3FB719EB116E00EE4EBF /* BASResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = A39C3FB519EB116E00EE4EBF /* BASResponse.m */; };
+		A39C3FBC19EB117300EE4EBF /* _BASQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = A39C3FB919EB117300EE4EBF /* _BASQuestion.m */; };
+		A39C3FBD19EB117300EE4EBF /* _BASResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = A39C3FBB19EB117300EE4EBF /* _BASResponse.m */; };
+		A39C3FC219EB239400EE4EBF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A39C3FC119EB239400EE4EBF /* QuartzCore.framework */; };
+		A39C3FC519EB2C2900EE4EBF /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = A39C3FC419EB2C2900EE4EBF /* lock.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +51,6 @@
 		A34552D219E7802B000DE5FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A34552D519E7802B000DE5FA /* ArtShow.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArtShow.xcdatamodel; sourceTree = "<group>"; };
 		A34552D719E7802B000DE5FA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		A34552DA19E7802B000DE5FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		A34552E019E7802B000DE5FA /* ArtShowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtShowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A34552E519E7802B000DE5FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A34552E619E7802B000DE5FA /* ArtShowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtShowTests.m; sourceTree = "<group>"; };
@@ -68,6 +73,17 @@
 		A345531719EAD15E000DE5FA /* BASDisplayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BASDisplayViewController.xib; sourceTree = "<group>"; };
 		A345531A19EAD5AD000DE5FA /* BASViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BASViewController.h; sourceTree = "<group>"; };
 		A345531B19EAD5AD000DE5FA /* BASViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BASViewController.m; sourceTree = "<group>"; };
+		A39C3FB019EB10AE00EE4EBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		A39C3FB219EB116E00EE4EBF /* BASQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BASQuestion.h; sourceTree = "<group>"; };
+		A39C3FB319EB116E00EE4EBF /* BASQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BASQuestion.m; sourceTree = "<group>"; };
+		A39C3FB419EB116E00EE4EBF /* BASResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BASResponse.h; sourceTree = "<group>"; };
+		A39C3FB519EB116E00EE4EBF /* BASResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BASResponse.m; sourceTree = "<group>"; };
+		A39C3FB819EB117300EE4EBF /* _BASQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _BASQuestion.h; sourceTree = "<group>"; };
+		A39C3FB919EB117300EE4EBF /* _BASQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _BASQuestion.m; sourceTree = "<group>"; };
+		A39C3FBA19EB117300EE4EBF /* _BASResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _BASResponse.h; sourceTree = "<group>"; };
+		A39C3FBB19EB117300EE4EBF /* _BASResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _BASResponse.m; sourceTree = "<group>"; };
+		A39C3FC119EB239400EE4EBF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A39C3FC419EB2C2900EE4EBF /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lock.png; path = Resources/lock.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A39C3FC219EB239400EE4EBF /* QuartzCore.framework in Frameworks */,
 				A34552FF19E79978000DE5FA /* OpenCL.framework in Frameworks */,
 				A34552FD19E79962000DE5FA /* QTKit.framework in Frameworks */,
 				A34552F119E78601000DE5FA /* opencv2.framework in Frameworks */,
@@ -114,23 +131,11 @@
 			children = (
 				A34552D119E7802B000DE5FA /* AppDelegate.h */,
 				A34552D219E7802B000DE5FA /* AppDelegate.m */,
-				A345530919EABB2E000DE5FA /* UserWindowController.h */,
-				A345530A19EABB2E000DE5FA /* UserWindowController.m */,
-				A345530C19EABDB2000DE5FA /* UserWindowController.xib */,
-				A345531A19EAD5AD000DE5FA /* BASViewController.h */,
-				A345531B19EAD5AD000DE5FA /* BASViewController.m */,
-				A345531019EAD10B000DE5FA /* BASInputViewController.h */,
-				A345531119EAD10B000DE5FA /* BASInputViewController.m */,
-				A345531219EAD10B000DE5FA /* BASInputViewController.xib */,
-				A345531519EAD15E000DE5FA /* BASDisplayViewController.h */,
-				A345531619EAD15E000DE5FA /* BASDisplayViewController.m */,
-				A345531719EAD15E000DE5FA /* BASDisplayViewController.xib */,
-				A345530119E8362A000DE5FA /* CoreDataStack.h */,
-				A345530219E8362A000DE5FA /* CoreDataStack.m */,
-				A345530019E83598000DE5FA /* CameraHandler.h */,
-				A34552F719E78A05000DE5FA /* CameraHandler.mm */,
-				A34552D919E7802B000DE5FA /* MainMenu.xib */,
-				A34552D419E7802B000DE5FA /* ArtShow.xcdatamodeld */,
+				A39C3FA619EADE5F00EE4EBF /* Model */,
+				A39C3FA519EADE5200EE4EBF /* View */,
+				A39C3FA719EADE8500EE4EBF /* Controller */,
+				A39C3FC319EB2C1C00EE4EBF /* Resources */,
+				A39C3FC419EB2C2900EE4EBF /* lock.png */,
 				A34552CD19E7802B000DE5FA /* Supporting Files */,
 				A345530819E8498A000DE5FA /* Frameworks */,
 			);
@@ -140,6 +145,7 @@
 		A34552CD19E7802B000DE5FA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A39C3FAF19EB10AE00EE4EBF /* MainMenu.xib */,
 				A34552D719E7802B000DE5FA /* Images.xcassets */,
 				A345530619E83788000DE5FA /* ArtShow-Prefix.pch */,
 				A34552CE19E7802B000DE5FA /* Info.plist */,
@@ -168,12 +174,73 @@
 		A345530819E8498A000DE5FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A39C3FC119EB239400EE4EBF /* QuartzCore.framework */,
 				A34552FE19E79978000DE5FA /* OpenCL.framework */,
 				A34552FC19E79962000DE5FA /* QTKit.framework */,
 				A34552F019E78601000DE5FA /* opencv2.framework */,
 			);
 			name = Frameworks;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		A39C3FA519EADE5200EE4EBF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A345530919EABB2E000DE5FA /* UserWindowController.h */,
+				A345530A19EABB2E000DE5FA /* UserWindowController.m */,
+				A345530C19EABDB2000DE5FA /* UserWindowController.xib */,
+				A345531A19EAD5AD000DE5FA /* BASViewController.h */,
+				A345531B19EAD5AD000DE5FA /* BASViewController.m */,
+				A345531019EAD10B000DE5FA /* BASInputViewController.h */,
+				A345531119EAD10B000DE5FA /* BASInputViewController.m */,
+				A345531219EAD10B000DE5FA /* BASInputViewController.xib */,
+				A345531519EAD15E000DE5FA /* BASDisplayViewController.h */,
+				A345531619EAD15E000DE5FA /* BASDisplayViewController.m */,
+				A345531719EAD15E000DE5FA /* BASDisplayViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A39C3FA619EADE5F00EE4EBF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A39C3FAE19EB100D00EE4EBF /* Private */,
+				A34552D419E7802B000DE5FA /* ArtShow.xcdatamodeld */,
+				A345530119E8362A000DE5FA /* CoreDataStack.h */,
+				A345530219E8362A000DE5FA /* CoreDataStack.m */,
+				A39C3FB219EB116E00EE4EBF /* BASQuestion.h */,
+				A39C3FB319EB116E00EE4EBF /* BASQuestion.m */,
+				A39C3FB419EB116E00EE4EBF /* BASResponse.h */,
+				A39C3FB519EB116E00EE4EBF /* BASResponse.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A39C3FA719EADE8500EE4EBF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A345530019E83598000DE5FA /* CameraHandler.h */,
+				A34552F719E78A05000DE5FA /* CameraHandler.mm */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A39C3FAE19EB100D00EE4EBF /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				A39C3FB819EB117300EE4EBF /* _BASQuestion.h */,
+				A39C3FB919EB117300EE4EBF /* _BASQuestion.m */,
+				A39C3FBA19EB117300EE4EBF /* _BASResponse.h */,
+				A39C3FBB19EB117300EE4EBF /* _BASResponse.m */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		A39C3FC319EB2C1C00EE4EBF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +324,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A345531419EAD10B000DE5FA /* BASInputViewController.xib in Resources */,
+				A39C3FB119EB10AE00EE4EBF /* MainMenu.xib in Resources */,
+				A39C3FC519EB2C2900EE4EBF /* lock.png in Resources */,
 				A34552D819E7802B000DE5FA /* Images.xcassets in Resources */,
-				A34552DB19E7802B000DE5FA /* MainMenu.xib in Resources */,
 				A345531919EAD15E000DE5FA /* BASDisplayViewController.xib in Resources */,
 				A345530D19EABDB2000DE5FA /* UserWindowController.xib in Resources */,
 			);
@@ -278,10 +346,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A39C3FB719EB116E00EE4EBF /* BASResponse.m in Sources */,
 				A345531819EAD15E000DE5FA /* BASDisplayViewController.m in Sources */,
 				A345530319E8362A000DE5FA /* CoreDataStack.m in Sources */,
+				A39C3FB619EB116E00EE4EBF /* BASQuestion.m in Sources */,
 				A34552D619E7802B000DE5FA /* ArtShow.xcdatamodeld in Sources */,
 				A345530B19EABB2E000DE5FA /* UserWindowController.m in Sources */,
+				A39C3FBD19EB117300EE4EBF /* _BASResponse.m in Sources */,
+				A39C3FBC19EB117300EE4EBF /* _BASQuestion.m in Sources */,
 				A345531319EAD10B000DE5FA /* BASInputViewController.m in Sources */,
 				A34552F819E78A05000DE5FA /* CameraHandler.mm in Sources */,
 				A34552D319E7802B000DE5FA /* AppDelegate.m in Sources */,
@@ -309,10 +381,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A34552D919E7802B000DE5FA /* MainMenu.xib */ = {
+		A39C3FAF19EB10AE00EE4EBF /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A34552DA19E7802B000DE5FA /* Base */,
+				A39C3FB019EB10AE00EE4EBF /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";

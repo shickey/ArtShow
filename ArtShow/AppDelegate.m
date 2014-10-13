@@ -10,6 +10,8 @@
 #import "CoreDataStack.h"
 #import "UserWindowController.h"
 
+#import "BASQuestion.h"
+
 @interface AppDelegate ()
 
 @property (strong, nonatomic) UserWindowController *windowController;
@@ -22,7 +24,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     self.coreDataStack = [[CoreDataStack alloc] init];
-    self.windowController = [[UserWindowController alloc] initWithWindowNibName:@"UserWindowController"];
+    self.windowController = [[UserWindowController alloc] initWithManagedObjectContext:self.coreDataStack.managedObjectContext];
     [self.windowController showWindow:self];
 }
 

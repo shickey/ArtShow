@@ -10,4 +10,8 @@
 
 @interface UserWindowController : NSWindowController
 
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
+- (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
+
 @end

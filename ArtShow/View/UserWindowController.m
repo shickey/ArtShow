@@ -28,11 +28,20 @@ typedef enum : NSUInteger {
 
 @implementation UserWindowController
 
+- (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
+{
+    self = [super initWithWindowNibName:@"UserWindowController"];
+    if (self) {
+        _managedObjectContext = managedObjectContext;
+    }
+    return self;
+}
+
 - (void)windowDidLoad
 {
     [super windowDidLoad];
     
-    BASInputViewController *inputViewController = [[BASInputViewController alloc] initWithNibName:@"BASInputViewController" bundle:nil];
+    BASInputViewController *inputViewController = [[BASInputViewController alloc] initWithManagedObjectContext:self.managedObjectContext];
     BASDisplayViewController *displayViewController = [[BASDisplayViewController alloc] initWithNibName:@"BASDisplayViewController" bundle:nil];
     self.viewControllers = @[inputViewController, displayViewController];
     
@@ -53,7 +62,13 @@ typedef enum : NSUInteger {
     
     BASViewController *nextViewController = self.viewControllers[viewControllerValue];
     [nextViewController viewWillAppear];
-    [self.containerView addSubview:nextViewController.view];
+    
+    NSView *nextView = nextViewController.view;
+    nextView.frame = self.containerView.bounds;
+    [nextView setTranslatesAutoresizingMaskIntoConstraints:YES];
+    nextView.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
+    [self.containerView addSubview:nextView];
+    
     [nextViewController viewDidAppear];
     self.currentViewController = nextViewController;
 }
