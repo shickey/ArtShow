@@ -7,7 +7,6 @@
         <customObject id="-2" userLabel="File's Owner" customClass="UserWindowController">
             <connections>
                 <outlet property="containerView" destination="lbK-fF-PWQ" id="LJp-8f-u6B"/>
-                <outlet property="videoView" destination="ZSh-Gc-8Ld" id="OsL-O2-FtP"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="aK5-u6-6V2"/>
             </connections>
         </customObject>
@@ -23,10 +22,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZSh-Gc-8Ld">
-                        <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="bG9-hq-PCv"/>
-                    </imageView>
                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="lbK-fF-PWQ">
                         <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                     </customView>

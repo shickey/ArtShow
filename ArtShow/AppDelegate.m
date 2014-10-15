@@ -9,13 +9,15 @@
 #import "AppDelegate.h"
 #import "CoreDataStack.h"
 #import "UserWindowController.h"
-
-#import "BASQuestion.h"
+#import "VideoStream.h"
+#import "VideoWindowController.h"
 
 @interface AppDelegate ()
 
-@property (strong, nonatomic) UserWindowController *windowController;
 @property (strong, nonatomic) CoreDataStack *coreDataStack;
+@property (strong, nonatomic) VideoStream *videoStream;
+@property (strong, nonatomic) VideoWindowController *vidWindowController;
+@property (strong, nonatomic) UserWindowController *userWindowController;
 
 @end
 
@@ -24,8 +26,14 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     self.coreDataStack = [[CoreDataStack alloc] init];
-    self.windowController = [[UserWindowController alloc] initWithManagedObjectContext:self.coreDataStack.managedObjectContext];
-    [self.windowController showWindow:self];
+    
+    self.videoStream = [[VideoStream alloc] init];
+    [self.videoStream start];
+    self.vidWindowController = [[VideoWindowController alloc] initWithVideoStream:self.videoStream];
+    [self.vidWindowController showWindow:self];
+    
+    self.userWindowController = [[UserWindowController alloc] initWithManagedObjectContext:self.coreDataStack.managedObjectContext];
+    [self.userWindowController showWindow:self];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

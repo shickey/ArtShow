@@ -31,7 +31,12 @@
 		A39C3FC219EB239400EE4EBF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A39C3FC119EB239400EE4EBF /* QuartzCore.framework */; };
 		A39C3FC519EB2C2900EE4EBF /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = A39C3FC419EB2C2900EE4EBF /* lock.png */; };
 		A39C3FC719EB664400EE4EBF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A39C3FC619EB664400EE4EBF /* AVFoundation.framework */; };
-		A39C3FCA19EB66EB00EE4EBF /* VideoStream.m in Sources */ = {isa = PBXBuildFile; fileRef = A39C3FC919EB66EB00EE4EBF /* VideoStream.m */; };
+		A39C3FCE19EC9B5F00EE4EBF /* TemplateIcon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A39C3FCD19EC9B5F00EE4EBF /* TemplateIcon2x.png */; };
+		A39C3FD019EC9BDA00EE4EBF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = A39C3FCF19EC9BDA00EE4EBF /* Constants.m */; };
+		A39C3FD419ECC75C00EE4EBF /* VideoWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A39C3FD219ECC75C00EE4EBF /* VideoWindowController.m */; };
+		A39C3FD519ECC75C00EE4EBF /* VideoWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A39C3FD319ECC75C00EE4EBF /* VideoWindowController.xib */; };
+		A39C3FD719ECCEFC00EE4EBF /* VideoStream.mm in Sources */ = {isa = PBXBuildFile; fileRef = A39C3FD619ECCEFC00EE4EBF /* VideoStream.mm */; };
+		A39C3FE519ECDF1600EE4EBF /* NSImage+cvMat.mm in Sources */ = {isa = PBXBuildFile; fileRef = A39C3FE419ECDF1600EE4EBF /* NSImage+cvMat.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,8 +90,16 @@
 		A39C3FC419EB2C2900EE4EBF /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lock.png; path = Resources/lock.png; sourceTree = "<group>"; };
 		A39C3FC619EB664400EE4EBF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A39C3FC819EB66EB00EE4EBF /* VideoStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoStream.h; sourceTree = "<group>"; };
-		A39C3FC919EB66EB00EE4EBF /* VideoStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoStream.m; sourceTree = "<group>"; };
 		A39C3FCB19EB6CA000EE4EBF /* VideoFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoFrame.h; sourceTree = "<group>"; };
+		A39C3FCC19EC9B5F00EE4EBF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		A39C3FCD19EC9B5F00EE4EBF /* TemplateIcon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TemplateIcon2x.png; sourceTree = "<group>"; };
+		A39C3FCF19EC9BDA00EE4EBF /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		A39C3FD119ECC75C00EE4EBF /* VideoWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoWindowController.h; sourceTree = "<group>"; };
+		A39C3FD219ECC75C00EE4EBF /* VideoWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoWindowController.m; sourceTree = "<group>"; };
+		A39C3FD319ECC75C00EE4EBF /* VideoWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoWindowController.xib; sourceTree = "<group>"; };
+		A39C3FD619ECCEFC00EE4EBF /* VideoStream.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoStream.mm; sourceTree = "<group>"; };
+		A39C3FE119ECDEED00EE4EBF /* NSImage+cvMat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSImage+cvMat.h"; path = "Categories/NSImage+cvMat.h"; sourceTree = "<group>"; };
+		A39C3FE419ECDF1600EE4EBF /* NSImage+cvMat.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "NSImage+cvMat.mm"; path = "Categories/NSImage+cvMat.mm"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +152,7 @@
 				A39C3FA619EADE5F00EE4EBF /* Model */,
 				A39C3FA519EADE5200EE4EBF /* View */,
 				A39C3FA719EADE8500EE4EBF /* Controller */,
+				A39C3FD819ECDE6500EE4EBF /* Categories */,
 				A39C3FC319EB2C1C00EE4EBF /* Resources */,
 				A39C3FC419EB2C2900EE4EBF /* lock.png */,
 				A34552CD19E7802B000DE5FA /* Supporting Files */,
@@ -155,6 +169,9 @@
 				A345530619E83788000DE5FA /* ArtShow-Prefix.pch */,
 				A34552CE19E7802B000DE5FA /* Info.plist */,
 				A34552CF19E7802B000DE5FA /* main.m */,
+				A39C3FCC19EC9B5F00EE4EBF /* Constants.h */,
+				A39C3FCF19EC9BDA00EE4EBF /* Constants.m */,
+				A39C3FCD19EC9B5F00EE4EBF /* TemplateIcon2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -202,6 +219,9 @@
 				A345531519EAD15E000DE5FA /* BASDisplayViewController.h */,
 				A345531619EAD15E000DE5FA /* BASDisplayViewController.m */,
 				A345531719EAD15E000DE5FA /* BASDisplayViewController.xib */,
+				A39C3FD119ECC75C00EE4EBF /* VideoWindowController.h */,
+				A39C3FD219ECC75C00EE4EBF /* VideoWindowController.m */,
+				A39C3FD319ECC75C00EE4EBF /* VideoWindowController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -226,7 +246,7 @@
 			children = (
 				A39C3FCB19EB6CA000EE4EBF /* VideoFrame.h */,
 				A39C3FC819EB66EB00EE4EBF /* VideoStream.h */,
-				A39C3FC919EB66EB00EE4EBF /* VideoStream.m */,
+				A39C3FD619ECCEFC00EE4EBF /* VideoStream.mm */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -247,6 +267,15 @@
 			children = (
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		A39C3FD819ECDE6500EE4EBF /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A39C3FE119ECDEED00EE4EBF /* NSImage+cvMat.h */,
+				A39C3FE419ECDF1600EE4EBF /* NSImage+cvMat.mm */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,7 +363,9 @@
 				A39C3FC519EB2C2900EE4EBF /* lock.png in Resources */,
 				A34552D819E7802B000DE5FA /* Images.xcassets in Resources */,
 				A345531919EAD15E000DE5FA /* BASDisplayViewController.xib in Resources */,
+				A39C3FD519ECC75C00EE4EBF /* VideoWindowController.xib in Resources */,
 				A345530D19EABDB2000DE5FA /* UserWindowController.xib in Resources */,
+				A39C3FCE19EC9B5F00EE4EBF /* TemplateIcon2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,13 +383,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A39C3FD419ECC75C00EE4EBF /* VideoWindowController.m in Sources */,
+				A39C3FE519ECDF1600EE4EBF /* NSImage+cvMat.mm in Sources */,
 				A39C3FB719EB116E00EE4EBF /* BASResponse.m in Sources */,
 				A345531819EAD15E000DE5FA /* BASDisplayViewController.m in Sources */,
 				A345530319E8362A000DE5FA /* CoreDataStack.m in Sources */,
 				A39C3FB619EB116E00EE4EBF /* BASQuestion.m in Sources */,
 				A34552D619E7802B000DE5FA /* ArtShow.xcdatamodeld in Sources */,
-				A39C3FCA19EB66EB00EE4EBF /* VideoStream.m in Sources */,
+				A39C3FD019EC9BDA00EE4EBF /* Constants.m in Sources */,
 				A345530B19EABB2E000DE5FA /* UserWindowController.m in Sources */,
+				A39C3FD719ECCEFC00EE4EBF /* VideoStream.mm in Sources */,
 				A39C3FBD19EB117300EE4EBF /* _BASResponse.m in Sources */,
 				A39C3FBC19EB117300EE4EBF /* _BASQuestion.m in Sources */,
 				A345531319EAD10B000DE5FA /* BASInputViewController.m in Sources */,

@@ -7,8 +7,18 @@
 //
 
 #import "VideoStream.h"
+#import <opencv2/opencv.hpp>
+
+using namespace cv;
 
 @interface VideoStream () <AVCaptureVideoDataOutputSampleBufferDelegate>
+
+@property (assign, nonatomic) Mat t_minus;
+@property (assign, nonatomic) Mat t;
+@property (assign, nonatomic) Mat t_plus;
+
+- (void)processFrame:(VideoFrame)frame;
+- (Mat)cvMatFromFrame:(VideoFrame)frame;
 
 @end
 
@@ -33,7 +43,16 @@
         NSLog(@"No video input devices found.");
         return NO;
     }
-    AVCaptureDevice *videoDevice = [devices lastObject];
+    AVCaptureDevice *videoDevice = nil;
+    for (AVCaptureDevice *device in devices) {
+        if ([device.localizedName isEqualToString:kSAECameraName]) {
+            videoDevice = device;
+        }
+    }
+    if (nil == videoDevice) {
+        NSLog(@"Unable to find camera.");
+        return NO;
+    }
     
     NSError *error = nil;
     AVCaptureDeviceInput *videoInput = [AVCaptureDeviceInput deviceInputWithDevice:videoDevice error:&error];
@@ -83,9 +102,50 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     size_t stride = CVPixelBufferGetBytesPerRow(imageBuffer);
     VideoFrame frame = {width, height, stride, baseAddress};
     
-    [self.delegate videoStream:self frameReady:frame];
+    [self processFrame:frame];
     
     CVPixelBufferUnlockBaseAddress(imageBuffer, 0);
+}
+
+- (void)processFrame:(VideoFrame)frame
+{
+    self.t_minus = self.t;
+    self.t = self.t_plus;
+    self.t_plus = [self cvMatFromFrame:frame];
+    
+    if (self.t_minus.data) {
+        Mat t_minus_gray;
+        Mat t_gray;
+        Mat t_plus_gray;
+        
+        cvtColor(self.t_minus, t_minus_gray, COLOR_RGB2GRAY);
+        cvtColor(self.t, t_gray, COLOR_RGB2GRAY);
+        cvtColor(self.t_plus, t_plus_gray, COLOR_RGB2GRAY);
+        
+        Mat diff1;
+        Mat diff2;
+        
+        absdiff(t_plus_gray, t_gray, diff1);
+        absdiff(t_gray, t_minus_gray, diff2);
+        
+        Mat motionDetected;
+        bitwise_and(diff1, diff2, motionDetected);
+        threshold(motionDetected, motionDetected, 50, 255, THRESH_BINARY);
+        
+        VideoFrame newFrame = {static_cast<size_t>(motionDetected.cols), static_cast<size_t>(motionDetected.rows), motionDetected.step[0], motionDetected.data};
+        
+        [self.delegate videoStream:self frameReady:newFrame];
+    }
+}
+
+
+- (Mat)cvMatFromFrame:(VideoFrame)frame
+{
+    Mat cvMat((int)frame.height, (int)frame.width, CV_8UC4);
+    
+    memcpy(cvMat.data, frame.data, sizeof(unsigned char) * cvMat.cols * cvMat.rows * 4);
+    
+    return cvMat;
 }
 
 - (void)dealloc
