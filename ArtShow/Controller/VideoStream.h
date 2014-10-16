@@ -13,8 +13,10 @@
 @class VideoStream;
 @protocol VideoStreamDelegate <NSObject>
 
-@required
+@optional
 - (void)videoStream:(VideoStream *)videoStream frameReady:(VideoFrame)frame;
+- (void)videoStreamDetectedObject:(VideoStream *)videoStream;
+- (void)videoStreamDetectedClearBackground:(VideoStream *)videoStream;
 
 @end
 
@@ -23,6 +25,7 @@
 @property (weak, nonatomic) id<VideoStreamDelegate> delegate;
 @property (strong, nonatomic) AVCaptureSession *captureSession;
 @property (strong, nonatomic) AVCaptureDeviceInput *deviceInput;
+@property (assign, nonatomic, readonly) BOOL hasObjectInView;
 
 - (BOOL)start;
 

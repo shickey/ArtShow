@@ -11,4 +11,8 @@
 
 @interface BASDisplayViewController : BASViewController
 
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
+- (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
+
 @end

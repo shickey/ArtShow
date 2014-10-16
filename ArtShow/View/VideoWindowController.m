@@ -49,4 +49,14 @@
     });
 }
 
+- (void)videoStreamDetectedObject:(VideoStream *)videoStream
+{
+    NSLog(@"FOUND OBJECT");
+}
+
+- (void)videoStreamDetectedClearBackground:(VideoStream *)videoStream
+{
+    NSLog(@"BACKGROUND CLEAR");
+}
+
 @end

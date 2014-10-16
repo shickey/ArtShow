@@ -11,14 +11,18 @@
 
 using namespace cv;
 
+static int const kSAELowPixelThreshold = 75;
+static int const kSAEHighPixelThreshold = 200;
+
 @interface VideoStream () <AVCaptureVideoDataOutputSampleBufferDelegate>
 
-@property (assign, nonatomic) Mat t_minus;
-@property (assign, nonatomic) Mat t;
-@property (assign, nonatomic) Mat t_plus;
+@property (assign, nonatomic) Ptr<BackgroundSubtractor> backgroundSubtractor;
+@property (assign, nonatomic, readwrite) BOOL hasObjectInView;
 
 - (void)processFrame:(VideoFrame)frame;
 - (Mat)cvMatFromFrame:(VideoFrame)frame;
+
+- (void)checkThreshold:(int)threshold;
 
 @end
 
@@ -45,7 +49,7 @@ using namespace cv;
     }
     AVCaptureDevice *videoDevice = nil;
     for (AVCaptureDevice *device in devices) {
-        if ([device.localizedName isEqualToString:kSAECameraName]) {
+        if ([device.localizedName hasPrefix:kSAECameraName]) {
             videoDevice = device;
         }
     }
@@ -84,6 +88,9 @@ using namespace cv;
     
     [self.captureSession addOutput:videoOutput];
     
+    // Create background subtractor object
+    self.backgroundSubtractor = createBackgroundSubtractorMOG2(500);
+    
     [self.captureSession startRunning];
     return YES;
 }
@@ -109,33 +116,19 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
 
 - (void)processFrame:(VideoFrame)frame
 {
-    self.t_minus = self.t;
-    self.t = self.t_plus;
-    self.t_plus = [self cvMatFromFrame:frame];
+    Mat mat = [self cvMatFromFrame:frame];
     
-    if (self.t_minus.data) {
-        Mat t_minus_gray;
-        Mat t_gray;
-        Mat t_plus_gray;
-        
-        cvtColor(self.t_minus, t_minus_gray, COLOR_RGB2GRAY);
-        cvtColor(self.t, t_gray, COLOR_RGB2GRAY);
-        cvtColor(self.t_plus, t_plus_gray, COLOR_RGB2GRAY);
-        
-        Mat diff1;
-        Mat diff2;
-        
-        absdiff(t_plus_gray, t_gray, diff1);
-        absdiff(t_gray, t_minus_gray, diff2);
-        
-        Mat motionDetected;
-        bitwise_and(diff1, diff2, motionDetected);
-        threshold(motionDetected, motionDetected, 50, 255, THRESH_BINARY);
-        
-        VideoFrame newFrame = {static_cast<size_t>(motionDetected.cols), static_cast<size_t>(motionDetected.rows), motionDetected.step[0], motionDetected.data};
-        
-        [self.delegate videoStream:self frameReady:newFrame];
-    }
+    Mat foregroundMask;
+    self.backgroundSubtractor->apply(mat, foregroundMask);
+    
+    int countOfWhitePixels = countNonZero(foregroundMask);
+    
+    [self checkThreshold:countOfWhitePixels];
+    
+    Mat outframe = foregroundMask;
+    VideoFrame newFrame = {static_cast<size_t>(outframe.cols), static_cast<size_t>(outframe.rows), outframe.step[0], outframe.data};
+    
+    [self.delegate videoStream:self frameReady:newFrame];
 }
 
 
@@ -143,9 +136,21 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
 {
     Mat cvMat((int)frame.height, (int)frame.width, CV_8UC4);
     
-    memcpy(cvMat.data, frame.data, sizeof(unsigned char) * cvMat.cols * cvMat.rows * 4);
+    memcpy(cvMat.data, frame.data, sizeof(unsigned char) * cvMat.cols * cvMat.rows * cvMat.channels());
     
     return cvMat;
+}
+
+- (void)checkThreshold:(int)threshold
+{
+    if (threshold > kSAEHighPixelThreshold && !self.hasObjectInView) {
+        self.hasObjectInView = YES;
+        [self.delegate videoStreamDetectedObject:self];
+    }
+    else if (threshold < kSAELowPixelThreshold && self.hasObjectInView) {
+        self.hasObjectInView = NO;
+        [self.delegate videoStreamDetectedClearBackground:self];
+    }
 }
 
 - (void)dealloc

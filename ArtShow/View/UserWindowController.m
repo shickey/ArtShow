@@ -50,7 +50,7 @@ typedef enum : NSUInteger {
         [vc viewDidLoad];
     }
     
-    [self switchViewController:BASInputViewControllerValue];
+    [self switchViewController:BASDisplayViewControllerValue];
 }
 
 - (void)switchViewController:(BASViewControllerValue)viewControllerValue
