@@ -8,12 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class VideoStream;
-
 @interface VideoWindowController : NSWindowController
 
-@property (strong, nonatomic) VideoStream *videoStream;
-
-- (instancetype)initWithVideoStream:(VideoStream *)videoStream;
+- (void)updateImage:(NSImage *)image;
 
 @end

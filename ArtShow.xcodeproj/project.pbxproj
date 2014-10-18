@@ -128,7 +128,6 @@
 		A34552C119E7802B000DE5FA = {
 			isa = PBXGroup;
 			children = (
-				A39C3FC619EB664400EE4EBF /* AVFoundation.framework */,
 				A34552CC19E7802B000DE5FA /* ArtShow */,
 				A34552E319E7802B000DE5FA /* ArtShowTests */,
 				A34552CB19E7802B000DE5FA /* Products */,
@@ -154,7 +153,6 @@
 				A39C3FA719EADE8500EE4EBF /* Controller */,
 				A39C3FD819ECDE6500EE4EBF /* Categories */,
 				A39C3FC319EB2C1C00EE4EBF /* Resources */,
-				A39C3FC419EB2C2900EE4EBF /* lock.png */,
 				A34552CD19E7802B000DE5FA /* Supporting Files */,
 				A345530819E8498A000DE5FA /* Frameworks */,
 			);
@@ -196,6 +194,7 @@
 		A345530819E8498A000DE5FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A39C3FC619EB664400EE4EBF /* AVFoundation.framework */,
 				A39C3FC119EB239400EE4EBF /* QuartzCore.framework */,
 				A34552FE19E79978000DE5FA /* OpenCL.framework */,
 				A34552FC19E79962000DE5FA /* QTKit.framework */,
@@ -265,6 +264,7 @@
 		A39C3FC319EB2C1C00EE4EBF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A39C3FC419EB2C2900EE4EBF /* lock.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";

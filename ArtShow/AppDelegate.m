@@ -15,8 +15,6 @@
 @interface AppDelegate ()
 
 @property (strong, nonatomic) CoreDataStack *coreDataStack;
-@property (strong, nonatomic) VideoStream *videoStream;
-@property (strong, nonatomic) VideoWindowController *vidWindowController;
 @property (strong, nonatomic) UserWindowController *userWindowController;
 
 @end
@@ -26,11 +24,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     self.coreDataStack = [[CoreDataStack alloc] init];
-    
-    self.videoStream = [[VideoStream alloc] init];
-    [self.videoStream start];
-    self.vidWindowController = [[VideoWindowController alloc] initWithVideoStream:self.videoStream];
-    [self.vidWindowController showWindow:self];
     
     self.userWindowController = [[UserWindowController alloc] initWithManagedObjectContext:self.coreDataStack.managedObjectContext];
     [self.userWindowController showWindow:self];

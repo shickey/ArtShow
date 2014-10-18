@@ -18,7 +18,11 @@
         NSLog(@"Error while fetching random question: %@", error);
     }
     
-    NSUInteger offset = questionCount - (arc4random() % questionCount);
+    if (questionCount == 0) {
+        return nil;
+    }
+    
+    NSUInteger offset = arc4random_uniform((unsigned int)questionCount);
     [fetchRequest setFetchOffset:offset];
     [fetchRequest setFetchLimit:1];
     

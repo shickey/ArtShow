@@ -7,9 +7,8 @@
 //
 
 #import "VideoWindowController.h"
-#import "VideoStream.h"
 
-@interface VideoWindowController () <VideoStreamDelegate>
+@interface VideoWindowController ()
 
 @property (weak) IBOutlet NSImageView *videoView;
 
@@ -17,46 +16,9 @@
 
 @implementation VideoWindowController
 
-- (instancetype)initWithVideoStream:(VideoStream *)videoStream
+- (void)updateImage:(NSImage *)image
 {
-    self = [super initWithWindowNibName:@"VideoWindowController"];
-    if (self) {
-        _videoStream = videoStream;
-        [_videoStream setDelegate:self];
-    }
-    return self;
-}
-
-- (void)videoStream:(VideoStream *)videoStream frameReady:(VideoFrame)frame
-{
-    __weak typeof(self) _weakSelf = self;
-    dispatch_sync( dispatch_get_main_queue(), ^{
-        CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceGray();
-        CGContextRef newContext = CGBitmapContextCreate(frame.data,
-                                                        frame.width,
-                                                        frame.height,
-                                                        8,
-                                                        frame.stride,
-                                                        colorSpace,
-                                                        kCGBitmapByteOrderDefault);
-        CGImageRef newImage = CGBitmapContextCreateImage(newContext);
-        CGContextRelease(newContext);
-        CGColorSpaceRelease(colorSpace);
-        
-        NSImage *image = [[NSImage alloc] initWithCGImage:newImage size:NSZeroSize];
-        CGImageRelease(newImage);
-        [[_weakSelf videoView] setImage:image];
-    });
-}
-
-- (void)videoStreamDetectedObject:(VideoStream *)videoStream
-{
-    NSLog(@"FOUND OBJECT");
-}
-
-- (void)videoStreamDetectedClearBackground:(VideoStream *)videoStream
-{
-    NSLog(@"BACKGROUND CLEAR");
+    [self.videoView setImage:image];
 }
 
 @end

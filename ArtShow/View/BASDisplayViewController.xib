@@ -6,14 +6,63 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="BASDisplayViewController">
             <connections>
+                <outlet property="imageView1" destination="3Gr-8s-GMh" id="ghP-J5-ZDi"/>
+                <outlet property="imageView2" destination="8mh-Xs-a7A" id="goX-yy-Vb7"/>
+                <outlet property="questionText1" destination="9Ta-oH-5pN" id="bAa-I2-2wX"/>
+                <outlet property="questionText2" destination="WOg-7x-DDi" id="VvI-JH-Bz2"/>
+                <outlet property="responseText1" destination="9fe-Kw-mFp" id="rVr-lh-Ehz"/>
+                <outlet property="responseText2" destination="DkY-dP-vcb" id="Zb5-Uy-L2T"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="1280" height="720"/>
+        <customView wantsLayer="YES" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" alphaValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="3Gr-8s-GMh">
+                    <rect key="frame" x="85" y="384" width="427" height="320"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="uaw-MR-qBL"/>
+                </imageView>
+                <textField wantsLayer="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" alphaValue="0.0" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Ta-oH-5pN">
+                    <rect key="frame" x="548" y="384" width="427" height="243"/>
+                    <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="center" title="Question Text" id="bJW-Ka-Qnu">
+                        <font key="font" size="36" name="DINAlternate-Bold"/>
+                        <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <imageView wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" alphaValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="8mh-Xs-a7A">
+                    <rect key="frame" x="520" y="384" width="427" height="320"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="M0T-Sy-eTv"/>
+                </imageView>
+                <textField wantsLayer="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" alphaValue="0.0" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WOg-7x-DDi">
+                    <rect key="frame" x="57" y="384" width="427" height="243"/>
+                    <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="center" title="Question Text" id="9xK-ha-34d">
+                        <font key="font" size="36" name="DINAlternate-Bold"/>
+                        <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" alphaValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="9fe-Kw-mFp">
+                    <rect key="frame" x="171" y="122" width="682" height="216"/>
+                    <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" alignment="center" title="Response Text" id="mP1-d8-seR">
+                        <font key="font" size="24" name="DINAlternate-Bold"/>
+                        <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" alphaValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="DkY-dP-vcb">
+                    <rect key="frame" x="171" y="122" width="682" height="216"/>
+                    <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" alignment="center" title="Response Text" id="x2e-hA-fhl">
+                        <font key="font" size="24" name="DINAlternate-Bold"/>
+                        <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <point key="canvasLocation" x="325" y="110"/>
         </customView>
     </objects>
 </document>
