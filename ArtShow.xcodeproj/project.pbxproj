@@ -12,7 +12,6 @@
 		A34552D619E7802B000DE5FA /* ArtShow.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A34552D419E7802B000DE5FA /* ArtShow.xcdatamodeld */; };
 		A34552D819E7802B000DE5FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A34552D719E7802B000DE5FA /* Images.xcassets */; };
 		A34552E719E7802B000DE5FA /* ArtShowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A34552E619E7802B000DE5FA /* ArtShowTests.m */; };
-		A34552F119E78601000DE5FA /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34552F019E78601000DE5FA /* opencv2.framework */; };
 		A34552FD19E79962000DE5FA /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34552FC19E79962000DE5FA /* QTKit.framework */; };
 		A34552FF19E79978000DE5FA /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34552FE19E79978000DE5FA /* OpenCL.framework */; };
 		A345530319E8362A000DE5FA /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = A345530219E8362A000DE5FA /* CoreDataStack.m */; };
@@ -37,6 +36,8 @@
 		A39C3FD519ECC75C00EE4EBF /* VideoWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A39C3FD319ECC75C00EE4EBF /* VideoWindowController.xib */; };
 		A39C3FD719ECCEFC00EE4EBF /* VideoStream.mm in Sources */ = {isa = PBXBuildFile; fileRef = A39C3FD619ECCEFC00EE4EBF /* VideoStream.mm */; };
 		A39C3FE519ECDF1600EE4EBF /* NSImage+cvMat.mm in Sources */ = {isa = PBXBuildFile; fileRef = A39C3FE419ECDF1600EE4EBF /* NSImage+cvMat.mm */; };
+		A39C3FEB19F4639D00EE4EBF /* opencv2.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A39C3FE919F4638C00EE4EBF /* opencv2.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A39C3FEC19F464D200EE4EBF /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A39C3FE919F4638C00EE4EBF /* opencv2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A39C3FE619F4621A00EE4EBF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A39C3FEB19F4639D00EE4EBF /* opencv2.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		A34552CA19E7802B000DE5FA /* ArtShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A34552CE19E7802B000DE5FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,7 +74,6 @@
 		A34552E019E7802B000DE5FA /* ArtShowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtShowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A34552E519E7802B000DE5FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A34552E619E7802B000DE5FA /* ArtShowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtShowTests.m; sourceTree = "<group>"; };
-		A34552F019E78601000DE5FA /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = /Library/Frameworks/opencv2.framework; sourceTree = "<absolute>"; };
 		A34552FC19E79962000DE5FA /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
 		A34552FE19E79978000DE5FA /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = System/Library/Frameworks/OpenCL.framework; sourceTree = SDKROOT; };
 		A345530119E8362A000DE5FA /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
@@ -100,6 +113,7 @@
 		A39C3FD619ECCEFC00EE4EBF /* VideoStream.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoStream.mm; sourceTree = "<group>"; };
 		A39C3FE119ECDEED00EE4EBF /* NSImage+cvMat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSImage+cvMat.h"; path = "Categories/NSImage+cvMat.h"; sourceTree = "<group>"; };
 		A39C3FE419ECDF1600EE4EBF /* NSImage+cvMat.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "NSImage+cvMat.mm"; path = "Categories/NSImage+cvMat.mm"; sourceTree = "<group>"; };
+		A39C3FE919F4638C00EE4EBF /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +125,7 @@
 				A39C3FC219EB239400EE4EBF /* QuartzCore.framework in Frameworks */,
 				A34552FF19E79978000DE5FA /* OpenCL.framework in Frameworks */,
 				A34552FD19E79962000DE5FA /* QTKit.framework in Frameworks */,
-				A34552F119E78601000DE5FA /* opencv2.framework in Frameworks */,
+				A39C3FEC19F464D200EE4EBF /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +167,7 @@
 				A39C3FA719EADE8500EE4EBF /* Controller */,
 				A39C3FD819ECDE6500EE4EBF /* Categories */,
 				A39C3FC319EB2C1C00EE4EBF /* Resources */,
+				A39C3FE819F462DF00EE4EBF /* Libraries */,
 				A34552CD19E7802B000DE5FA /* Supporting Files */,
 				A345530819E8498A000DE5FA /* Frameworks */,
 			);
@@ -198,7 +213,6 @@
 				A39C3FC119EB239400EE4EBF /* QuartzCore.framework */,
 				A34552FE19E79978000DE5FA /* OpenCL.framework */,
 				A34552FC19E79962000DE5FA /* QTKit.framework */,
-				A34552F019E78601000DE5FA /* opencv2.framework */,
 			);
 			name = Frameworks;
 			path = ..;
@@ -278,6 +292,14 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		A39C3FE819F462DF00EE4EBF /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				A39C3FE919F4638C00EE4EBF /* opencv2.framework */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -288,6 +310,7 @@
 				A34552C619E7802B000DE5FA /* Sources */,
 				A34552C719E7802B000DE5FA /* Frameworks */,
 				A34552C819E7802B000DE5FA /* Resources */,
+				A39C3FE619F4621A00EE4EBF /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -516,11 +539,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					"$(PROJECT_DIR)/ArtShow/Libraries",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ArtShow/ArtShow-Prefix.pch";
 				INFOPLIST_FILE = ArtShow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -533,11 +558,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					"$(PROJECT_DIR)/ArtShow/Libraries",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ArtShow/ArtShow-Prefix.pch";
 				INFOPLIST_FILE = ArtShow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
