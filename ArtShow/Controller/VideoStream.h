@@ -14,7 +14,7 @@
 @protocol VideoStreamDelegate <NSObject>
 
 @optional
-- (void)videoStream:(VideoStream *)videoStream frameReady:(VideoFrame)frame;
+- (void)videoStream:(VideoStream *)videoStream frameReady:(VideoFrame)frame foregroundMask:(VideoFrame)mask;
 - (void)videoStreamDetectedObject:(VideoStream *)videoStream;
 - (void)videoStreamDetectedClearBackground:(VideoStream *)videoStream;
 

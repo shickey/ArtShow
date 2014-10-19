@@ -71,6 +71,15 @@
     [response setQuestion:self.currentQuestion];
     [response setResponseText:self.userResponseField.stringValue];
     
+    NSImage *image = [self.delegate inputViewControllerRequestedImage:self];
+    if (nil != image) {
+        [image lockFocus];
+        NSBitmapImageRep *rep = [[NSBitmapImageRep alloc] initWithFocusedViewRect:NSMakeRect(0, 0, image.size.width, image.size.height)];
+        [image unlockFocus];
+        NSData *imageData = [rep representationUsingType:NSBMPFileType properties:nil];
+        [response setImage:imageData];
+    }
+    
     NSError *saveError = nil;
     if (![self.managedObjectContext save:&saveError]) {
         NSLog(@"Error while saving managed object context: %@", saveError);

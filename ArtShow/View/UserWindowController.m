@@ -18,10 +18,11 @@ typedef enum : NSUInteger {
     BASInputViewControllerValue
 } BASViewControllerValue;
 
-@interface UserWindowController () <VideoStreamDelegate>
+@interface UserWindowController () <VideoStreamDelegate, BASInputViewControllerDelegate>
 
 @property (strong, nonatomic) VideoStream *videoStream;
 @property (strong, nonatomic) VideoWindowController *videoWindowController;
+@property (strong, nonatomic) NSImage *lastImage;
 
 @property (strong, nonatomic) NSArray *viewControllers;
 @property (strong, nonatomic) BASViewController *currentViewController;
@@ -59,6 +60,7 @@ typedef enum : NSUInteger {
     
     BASDisplayViewController *displayViewController = [[BASDisplayViewController alloc] initWithManagedObjectContext:self.managedObjectContext];
     BASInputViewController *inputViewController = [[BASInputViewController alloc] initWithManagedObjectContext:self.managedObjectContext];
+    [inputViewController setDelegate:self];
     self.viewControllers = @[displayViewController, inputViewController];
     
     for (BASViewController *vc in self.viewControllers) {
@@ -96,25 +98,42 @@ typedef enum : NSUInteger {
 
 // VideoStreamDelegate Methods
 
-- (void)videoStream:(VideoStream *)videoStream frameReady:(VideoFrame)frame
+- (void)videoStream:(VideoStream *)videoStream frameReady:(VideoFrame)frame foregroundMask:(VideoFrame)mask
 {
     __weak typeof(self) _weakSelf = self;
     dispatch_sync( dispatch_get_main_queue(), ^{
-        CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceGray();
-        CGContextRef newContext = CGBitmapContextCreate(frame.data,
-                                                        frame.width,
-                                                        frame.height,
-                                                        8,
-                                                        frame.stride,
-                                                        colorSpace,
-                                                        kCGBitmapByteOrderDefault);
-        CGImageRef newImage = CGBitmapContextCreateImage(newContext);
-        CGContextRelease(newContext);
-        CGColorSpaceRelease(colorSpace);
+        CGColorSpaceRef frameColorSpace = CGColorSpaceCreateDeviceRGB();
+        CGContextRef frameContext = CGBitmapContextCreate(frame.data,
+                                                          frame.width,
+                                                          frame.height,
+                                                          8,
+                                                          frame.stride,
+                                                          frameColorSpace,
+                                                          kCGBitmapByteOrder32Little |
+                                                          kCGImageAlphaPremultipliedFirst);
+        CGImageRef frameImageRef = CGBitmapContextCreateImage(frameContext);
+        CGContextRelease(frameContext);
+        CGColorSpaceRelease(frameColorSpace);
         
-        NSImage *image = [[NSImage alloc] initWithCGImage:newImage size:NSZeroSize];
-        CGImageRelease(newImage);
-        [_weakSelf.videoWindowController updateImage:image];
+        NSImage *colorImage = [[NSImage alloc] initWithCGImage:frameImageRef size:NSZeroSize];
+        CGImageRelease(frameImageRef);
+        [_weakSelf setLastImage:colorImage];
+        
+        CGColorSpaceRef maskColorSpace = CGColorSpaceCreateDeviceGray();
+        CGContextRef maskContext = CGBitmapContextCreate(mask.data,
+                                                         mask.width,
+                                                         mask.height,
+                                                         8,
+                                                         mask.stride,
+                                                         maskColorSpace,
+                                                         kCGBitmapByteOrderDefault);
+        CGImageRef maskImageRef = CGBitmapContextCreateImage(maskContext);
+        CGContextRelease(maskContext);
+        CGColorSpaceRelease(maskColorSpace);
+        
+        NSImage *maskImage = [[NSImage alloc] initWithCGImage:maskImageRef size:NSZeroSize];
+        CGImageRelease(maskImageRef);
+        [_weakSelf.videoWindowController updateImage:maskImage];
     });
 }
 
@@ -134,6 +153,13 @@ typedef enum : NSUInteger {
     dispatch_sync(dispatch_get_main_queue(), ^{
         [_weakSelf switchViewController:BASDisplayViewControllerValue];
     });
+}
+
+// InputViewDelegate
+
+- (NSImage *)inputViewControllerRequestedImage:(BASInputViewController *)inputViewController
+{
+    return self.lastImage;
 }
 
 @end

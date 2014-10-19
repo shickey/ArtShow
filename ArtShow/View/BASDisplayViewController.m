@@ -75,12 +75,12 @@ typedef enum : NSUInteger {
 - (void)resetDisplay
 {
     self.currentDisplayType = kSAEDisplayShowingNone;
-    [self.imageView1    setAlphaValue:0.0f];
-    [self.questionText1 setAlphaValue:0.0f];
-    [self.responseText1 setAlphaValue:0.0f];
-    [self.imageView2    setAlphaValue:0.0f];
-    [self.questionText2 setAlphaValue:0.0f];
-    [self.responseText2 setAlphaValue:0.0f];
+    [self.imageView1.layer    setOpacity:0.0f];
+    [self.questionText1.layer setOpacity:0.0f];
+    [self.responseText1.layer setOpacity:0.0f];
+    [self.imageView2.layer    setOpacity:0.0f];
+    [self.questionText2.layer setOpacity:0.0f];
+    [self.responseText2.layer setOpacity:0.0f];
 }
 
 - (void)changeDisplay
@@ -188,7 +188,7 @@ typedef enum : NSUInteger {
 - (CGColorRef)generateColor
 {
     long ARC4RANDOM_MAX = 0x100000000;
-    NSColor *color = [NSColor colorWithHue:(arc4random() / (float)ARC4RANDOM_MAX) saturation:0.34f brightness:1.0f alpha:1.0f];
+    NSColor *color = [NSColor colorWithHue:(arc4random() / (float)ARC4RANDOM_MAX) saturation:0.65f brightness:1.0f alpha:1.0f];
     CGFloat red;
     CGFloat green;
     CGFloat blue;

@@ -125,10 +125,9 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     
     [self checkThreshold:countOfWhitePixels];
     
-    Mat outframe = foregroundMask;
-    VideoFrame newFrame = {static_cast<size_t>(outframe.cols), static_cast<size_t>(outframe.rows), outframe.step[0], outframe.data};
+    VideoFrame maskFrame  = {static_cast<size_t>(foregroundMask.cols), static_cast<size_t>(foregroundMask.rows), foregroundMask.step[0], foregroundMask.data};
     
-    [self.delegate videoStream:self frameReady:newFrame];
+    [self.delegate videoStream:self frameReady:frame foregroundMask:maskFrame];
 }
 
 
